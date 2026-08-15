@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud & AI Transformation Consulting</title>
+    <script>
+      // Single Page Apps for GitHub Pages redirection script
+      // Redirects 404 paths to the root hash route
+      sessionStorage.redirect = location.href;
+      var pathSegments = location.pathname.split('/');
+      // If deployed in a subfolder on github pages (e.g. /repo-name/some-page)
+      var base = '/' + (pathSegments[1] ? pathSegments[1] + '/' : '');
+      location.replace(base + '#' + location.pathname.slice(base.length) + location.search + location.hash);
+    </script>
+  </head>
+  <body>
+    Redirecting to application...
+  </body>
+</html>
