@@ -31,8 +31,8 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  companyName: "[COMPANY NAME]",
-  shortName: "ApexCloud & AI",
+  companyName: "Devyai Technology Services",
+  shortName: "Devyai Tech",
   tagline: "Cloud & AI Transformation for Modern Enterprises",
   supportingMessage:
     "We help organizations modernize their cloud infrastructure, adopt Generative AI, and build scalable digital platforms across AWS, Azure and Google Cloud.",
