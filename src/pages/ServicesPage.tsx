@@ -68,6 +68,39 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         'Continuous security & compliance posture checks',
       ],
     },
+    {
+      title: 'Corporate Technology Training',
+      duration: 'Custom (2-5 Days or Multi-Week)',
+      bestFor: 'Engineering teams, cloud architects, and tech leads looking to upskill in Cloud, GenAI, or DevOps.',
+      outcomes: [
+        '60% hands-on code labs & real-world blueprints',
+        'Curriculum customized to client technology stack',
+        'Led directly by Principal Enterprise Architects',
+        'Capability benchmarks & capstone design challenges',
+      ],
+    },
+    {
+      title: 'Specialized Staff Augmentation',
+      duration: 'Sprint-Based / Dedicated Months',
+      bestFor: 'Accelerating transformation roadmaps and filling senior cloud, platform, AI, or architecture skill gaps.',
+      outcomes: [
+        'Senior engineers vetted by Principal Architects',
+        'Immediate sprint integration (GitHub, Jira, Standups)',
+        'Devyai senior architecture oversight included',
+        'Elastic scaling with zero long-term agency lock-in',
+      ],
+    },
+    {
+      title: 'Fractional Architecture Leadership',
+      duration: '10 – 20 Hours / Week',
+      bestFor: 'Mid-market & growing tech enterprises needing Chief Architect guidance without full-time executive overhead.',
+      outcomes: [
+        'Strategic technology roadmap formulation',
+        'RFC & architecture decision record (ADR) stewardship',
+        'Technical due diligence & vendor selection',
+        'Engineering team mentorship & capability growth',
+      ],
+    },
   ];
 
   return (
@@ -86,7 +119,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
-            We deliver senior architecture, hands-on engineering, and governance across three integrated domains to modernize enterprise operations.
+            We deliver senior architecture, hands-on engineering, corporate technical training, and specialized talent augmentation across five integrated domains to modernize enterprise operations.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -112,14 +145,14 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Practice Selector Tabs */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 mb-12">
           {servicesData.map((service) => {
             const isSelected = service.id === selectedServiceId;
             return (
               <button
                 key={service.id}
                 onClick={() => setSelectedServiceId(service.id)}
-                className={`p-6 rounded-sm border text-left transition-all relative ${
+                className={`p-5 rounded-sm border text-left transition-all relative flex flex-col justify-between ${
                   isSelected
                     ? 'bg-[#121214] border-blue-500 shadow-xl shadow-blue-500/10'
                     : 'bg-[#0A0A0B] border-white/10 hover:bg-[#121214]'
@@ -128,17 +161,19 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
                 {isSelected && (
                   <div className="absolute top-0 left-0 right-0 h-1 bg-blue-500" />
                 )}
-                <div className="text-lg font-black uppercase tracking-tight text-white mb-1">
-                  {service.title}
+                <div>
+                  <div className="text-sm font-black uppercase tracking-tight text-white mb-1.5 line-clamp-2">
+                    {service.title}
+                  </div>
+                  <p className="text-[11px] text-slate-400 line-clamp-2 leading-snug">
+                    {service.shortDesc}
+                  </p>
                 </div>
-                <p className="text-xs text-slate-400 line-clamp-2">
-                  {service.shortDesc}
-                </p>
-                <div className="mt-4 flex items-center justify-between text-xs font-mono">
+                <div className="mt-4 flex items-center justify-between text-[10px] font-mono">
                   <span className={isSelected ? 'text-blue-400 font-bold uppercase' : 'text-slate-500 uppercase'}>
-                    {isSelected ? 'Active Practice' : 'Click to inspect'}
+                    {isSelected ? 'Active Practice' : 'Inspect'}
                   </span>
-                  <ChevronRight className={`w-4 h-4 ${isSelected ? 'text-blue-400' : 'text-slate-700'}`} />
+                  <ChevronRight className={`w-3.5 h-3.5 ${isSelected ? 'text-blue-400' : 'text-slate-700'}`} />
                 </div>
               </button>
             );
@@ -253,7 +288,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {engagementModels.map((model, idx) => (
               <div
                 key={idx}

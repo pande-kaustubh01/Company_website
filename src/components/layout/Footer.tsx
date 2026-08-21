@@ -10,7 +10,9 @@ import {
   ArrowUpRight, 
   Cpu, 
   ShieldCheck,
-  Calendar
+  Calendar,
+  GraduationCap,
+  Users
 } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 import { PageRoute } from '../../types';
@@ -42,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({
               <span>{siteConfig.tagline}</span>
             </div>
             <p className="text-slate-400 text-xs sm:text-sm max-w-2xl font-normal">
-              Pragmatic enterprise cloud modernization, production Generative AI, and platform engineering across AWS, Azure, and Google Cloud.
+              Pragmatic enterprise cloud modernization, production Generative AI, corporate technical training, and engineering talent across AWS, Azure, and Google Cloud.
             </p>
           </div>
           <div className="flex items-center gap-3 shrink-0">
@@ -79,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
             
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              A boutique enterprise architecture and technology engineering consultancy. We partner with CTOs, CIOs, and engineering leaders to deliver measurable business outcomes.
+              A boutique enterprise architecture, technology engineering, and corporate capability development consultancy. We partner with CTOs, CIOs, and engineering leaders to deliver measurable business outcomes.
             </p>
 
             <div className="pt-2">
@@ -134,10 +136,28 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('services')}
-                  className="hover:text-blue-400 transition-colors text-xs text-slate-400 uppercase tracking-wider hover:underline"
+                  onClick={() => handleNav('corporate-training')}
+                  className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-left"
                 >
-                  All Services Matrix →
+                  <GraduationCap className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <span>Corporate Training</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNav('staff-augmentation')}
+                  className="hover:text-blue-400 transition-colors flex items-center gap-1.5 text-left"
+                >
+                  <Users className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                  <span>Staff Augmentation</span>
+                </button>
+              </li>
+              <li className="pt-1">
+                <button
+                  onClick={() => handleNav('services')}
+                  className="hover:text-blue-400 transition-colors text-xs text-blue-400 uppercase tracking-wider hover:underline"
+                >
+                  All 5 Practices Matrix →
                 </button>
               </li>
             </ul>

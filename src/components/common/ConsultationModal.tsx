@@ -233,9 +233,11 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({
                     onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
                     className="w-full px-3 py-2 text-sm bg-[#121214] border border-white/10 rounded-sm text-white focus:outline-none focus:border-blue-500"
                   >
-                    <option value="Cloud Migration & VMware Modernization">Cloud Migration & VMware Modernization</option>
+                    <option value="Cloud Transformation & VMware Modernization">Cloud Transformation & VMware Modernization</option>
                     <option value="Generative AI, RAG & AI Agents">Generative AI, RAG & AI Agents</option>
                     <option value="Platform Engineering & Kubernetes">Platform Engineering & Kubernetes</option>
+                    <option value="Corporate Technology Training">Corporate Technology Training</option>
+                    <option value="Technology Staff Augmentation">Technology Staff Augmentation</option>
                     <option value="Cloud Cost & FinOps Optimization">Cloud Cost & FinOps Optimization</option>
                     <option value="Multi-Cloud Enterprise Architecture">Multi-Cloud Enterprise Architecture</option>
                     <option value="General Architecture Review">General Architecture Review</option>

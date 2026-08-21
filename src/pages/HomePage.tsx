@@ -3,6 +3,8 @@ import {
   Cloud, 
   Sparkles, 
   Layers, 
+  GraduationCap,
+  Users,
   ArrowRight, 
   Calendar, 
   ShieldCheck, 
@@ -18,7 +20,9 @@ import {
   Server,
   Database,
   BarChart3,
-  Bot
+  Bot,
+  Compass,
+  Check
 } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 import { servicesData } from '../data/servicesData';
@@ -61,7 +65,7 @@ export const HomePage: React.FC<HomePageProps> = ({
     },
     {
       num: '03',
-      title: 'Build',
+      title: 'Build & Deliver',
       shortDesc: 'Develop and deploy the solution using modern cloud, AI and engineering practices.',
       details:
         'Hands-on engineering: provisioning automated Landing Zones, standing up vector stores & LLM orchestrators, executing migration factories with automated testing, and setting up GitOps pipelines.',
@@ -69,11 +73,19 @@ export const HomePage: React.FC<HomePageProps> = ({
     },
     {
       num: '04',
-      title: 'Optimize',
-      shortDesc: 'Measure outcomes, improve performance, reduce cost and continuously evolve the platform.',
+      title: 'Train & Enable',
+      shortDesc: 'Upskill your engineering and architecture teams for long-term self-sufficiency.',
       details:
-        'Post-launch telemetry tuning, automated FinOps cost rightsizing, continuous model latency & hallucination monitoring, SRE runbook automation, and ongoing platform governance.',
-      deliverable: 'FinOps Governance Dashboard & Continuous Improvement Telemetry',
+        'Custom instructor-led technical workshops, hands-on architectural design sessions, and comprehensive code handovers to empower your internal teams to operate and scale the platform.',
+      deliverable: 'Customized Lab Curriculums, Team Enablement & Runbook Mastery',
+    },
+    {
+      num: '05',
+      title: 'Scale & Optimize',
+      shortDesc: 'Measure outcomes, augment engineering capacity, reduce cost, and continuously evolve.',
+      details:
+        'Post-launch telemetry tuning, automated FinOps rightsizing, senior staff augmentation for continuous velocity, and quarterly architecture advisory stewardship.',
+      deliverable: 'FinOps Governance Dashboard & Elastic Engineering Capacity',
     },
   ];
 
@@ -105,6 +117,20 @@ export const HomePage: React.FC<HomePageProps> = ({
       desc: 'Turn unguided GenAI experimentation into secure, private, production-ready RAG applications and autonomous AI agents.',
       tag: 'Generative AI',
       stat: 'Strict Zero-Data Retention Rails',
+    },
+    {
+      icon: GraduationCap,
+      title: 'Build Internal Capability',
+      desc: 'Empower in-house engineering and architecture teams through pragmatic, instructor-led training tailored to your exact tech stack.',
+      tag: 'Corporate Training',
+      stat: '60% Hands-On Production Labs',
+    },
+    {
+      icon: Users,
+      title: 'Scale Technology Delivery',
+      desc: 'Fill critical capability gaps and accelerate transformation with senior, architecture-vetted engineers and fractional technical leadership.',
+      tag: 'Staff Augmentation',
+      stat: 'Immediate Sprint-Ready Talent',
     },
   ];
 
@@ -286,6 +312,130 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
+      {/* 2.5 WHAT DO YOU NEED? (QUICK NAVIGATION SELECTOR) */}
+      <section className="py-16 bg-[#0E0E10] border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
+            <div className="text-xs font-mono uppercase tracking-[0.25em] text-blue-400 font-bold">
+              Capabilities Navigator
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
+              What Do You Need?
+            </h2>
+            <p className="text-slate-400 text-xs sm:text-sm">
+              Select your primary engineering priority to navigate directly to tailored practices and solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+            <button
+              onClick={() => onNavigate('cloud-transformation')}
+              className="p-4 rounded-sm bg-[#121214] border border-white/10 hover:border-blue-500 hover:bg-[#18181B] text-left transition-all group flex flex-col justify-between space-y-3"
+            >
+              <div className="p-2 w-9 h-9 rounded-sm bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <Cloud className="w-4 h-4" />
+              </div>
+              <div className="space-y-1">
+                <div className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-blue-400 transition-colors">
+                  Modernize Cloud
+                </div>
+                <p className="text-[11px] text-slate-400 leading-snug">
+                  AWS/Azure migration, Landing Zones & FinOps
+                </p>
+              </div>
+              <div className="text-[10px] font-mono text-blue-400 flex items-center gap-1 font-semibold pt-1">
+                <span>Explore</span>
+                <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </button>
+
+            <button
+              onClick={() => onNavigate('ai-genai')}
+              className="p-4 rounded-sm bg-[#121214] border border-white/10 hover:border-blue-500 hover:bg-[#18181B] text-left transition-all group flex flex-col justify-between space-y-3"
+            >
+              <div className="p-2 w-9 h-9 rounded-sm bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <Sparkles className="w-4 h-4" />
+              </div>
+              <div className="space-y-1">
+                <div className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-blue-400 transition-colors">
+                  Adopt GenAI
+                </div>
+                <p className="text-[11px] text-slate-400 leading-snug">
+                  Production RAG, Vector DBs & AI Agents
+                </p>
+              </div>
+              <div className="text-[10px] font-mono text-blue-400 flex items-center gap-1 font-semibold pt-1">
+                <span>Explore</span>
+                <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </button>
+
+            <button
+              onClick={() => onNavigate('platform-engineering')}
+              className="p-4 rounded-sm bg-[#121214] border border-white/10 hover:border-blue-500 hover:bg-[#18181B] text-left transition-all group flex flex-col justify-between space-y-3"
+            >
+              <div className="p-2 w-9 h-9 rounded-sm bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <Layers className="w-4 h-4" />
+              </div>
+              <div className="space-y-1">
+                <div className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-blue-400 transition-colors">
+                  Automate Platforms
+                </div>
+                <p className="text-[11px] text-slate-400 leading-snug">
+                  Kubernetes, Terraform IaC & GitOps
+                </p>
+              </div>
+              <div className="text-[10px] font-mono text-blue-400 flex items-center gap-1 font-semibold pt-1">
+                <span>Explore</span>
+                <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </button>
+
+            <button
+              onClick={() => onNavigate('corporate-training')}
+              className="p-4 rounded-sm bg-[#121214] border border-white/10 hover:border-blue-500 hover:bg-[#18181B] text-left transition-all group flex flex-col justify-between space-y-3"
+            >
+              <div className="p-2 w-9 h-9 rounded-sm bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <GraduationCap className="w-4 h-4" />
+              </div>
+              <div className="space-y-1">
+                <div className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-blue-400 transition-colors">
+                  Upskill Teams
+                </div>
+                <p className="text-[11px] text-slate-400 leading-snug">
+                  Instructor-led Cloud, AI & DevOps Labs
+                </p>
+              </div>
+              <div className="text-[10px] font-mono text-blue-400 flex items-center gap-1 font-semibold pt-1">
+                <span>Explore</span>
+                <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </button>
+
+            <button
+              onClick={() => onNavigate('staff-augmentation')}
+              className="p-4 rounded-sm bg-[#121214] border border-white/10 hover:border-blue-500 hover:bg-[#18181B] text-left transition-all group flex flex-col justify-between space-y-3"
+            >
+              <div className="p-2 w-9 h-9 rounded-sm bg-blue-600/15 border border-blue-500/30 text-blue-400 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                <Users className="w-4 h-4" />
+              </div>
+              <div className="space-y-1">
+                <div className="text-xs font-bold text-white uppercase tracking-wider group-hover:text-blue-400 transition-colors">
+                  Scale Engineering
+                </div>
+                <p className="text-[11px] text-slate-400 leading-snug">
+                  Vetted Cloud, AI & Architecture Talent
+                </p>
+              </div>
+              <div className="text-[10px] font-mono text-blue-400 flex items-center gap-1 font-semibold pt-1">
+                <span>Explore</span>
+                <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* 3. SERVICES SECTION (WHAT WE DO) */}
       <section className="py-24 bg-[#0A0A0B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,7 +449,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 What We Do
               </h2>
               <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                We combine enterprise architecture with hands-on systems engineering across three core focus practices.
+                We combine enterprise architecture with hands-on systems engineering across five specialized practices.
               </p>
             </div>
 
@@ -307,17 +457,19 @@ export const HomePage: React.FC<HomePageProps> = ({
               onClick={() => onNavigate('services')}
               className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-400 hover:text-white transition-colors"
             >
-              <span>View Services Matrix</span>
+              <span>View All Services</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesData.map((service) => {
               const iconMap: Record<string, any> = {
                 Cloud: Cloud,
                 Sparkles: Sparkles,
                 Layers: Layers,
+                GraduationCap: GraduationCap,
+                Users: Users,
               };
               const ServiceIcon = iconMap[service.iconName] || Cloud;
 
@@ -346,7 +498,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                         Engineering Focus:
                       </div>
                       <ul className="space-y-2">
-                        {service.capabilities.slice(0, 5).map((cap, i) => (
+                        {service.capabilities.slice(0, 4).map((cap, i) => (
                           <li key={i} className="text-xs text-slate-300 flex items-start gap-2">
                             <span className="text-blue-400 shrink-0 font-bold">•</span>
                             <span>{cap}</span>
@@ -385,11 +537,11 @@ export const HomePage: React.FC<HomePageProps> = ({
               Technology Should Create Business Value
             </h2>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-              We do not sell developer hours or promote hype cycles. We engineer architecture that delivers quantifiable cost reduction, deployment velocity, and enterprise resilience.
+              We do not sell developer hours or promote hype cycles. We engineer architecture that delivers quantifiable cost reduction, deployment velocity, team capability, and enterprise resilience.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {businessOutcomes.map((outcome, idx) => {
               const Icon = outcome.icon;
               return (
@@ -423,7 +575,7 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
       </section>
 
-      {/* 5. HOW WE WORK (4-STEP JOURNEY) */}
+      {/* 5. HOW WE WORK (5-STEP JOURNEY) */}
       <section className="py-24 bg-[#0A0A0B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
@@ -435,36 +587,36 @@ export const HomePage: React.FC<HomePageProps> = ({
               How We Work
             </h2>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-              A disciplined, architecture-first methodology designed to mitigate risk and guarantee high-velocity execution from day one.
+              A disciplined, architecture-first methodology designed to mitigate risk, upskill your teams, and guarantee high-velocity execution from day one.
             </p>
           </div>
 
           {/* Desktop Horizontal Process Journey */}
-          <div className="hidden lg:grid grid-cols-4 gap-4 mb-8">
+          <div className="hidden lg:grid grid-cols-5 gap-3 mb-8">
             {processSteps.map((step, idx) => (
               <button
                 key={step.num}
                 onClick={() => setActiveProcessStep(idx)}
-                className={`p-6 rounded-sm border text-left transition-all relative ${
+                className={`p-5 rounded-sm border text-left transition-all relative ${
                   activeProcessStep === idx
                     ? 'bg-[#18181B] border-blue-500 text-white shadow-xl shadow-blue-500/10'
                     : 'bg-[#101012] border-white/10 hover:bg-[#141416]'
                 }`}
               >
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-3">
                   <span className={`text-2xl font-black font-mono ${
                     activeProcessStep === idx ? 'text-blue-400' : 'text-slate-500'
                   }`}>
                     {step.num}
                   </span>
                   {idx < processSteps.length - 1 && (
-                    <ChevronRight className="w-5 h-5 text-slate-700" />
+                    <ChevronRight className="w-4 h-4 text-slate-700" />
                   )}
                 </div>
-                <div className="text-base font-bold text-white mb-2 uppercase tracking-wide">
+                <div className="text-sm font-bold text-white mb-1 uppercase tracking-wide">
                   {step.title}
                 </div>
-                <div className="text-xs text-slate-400 line-clamp-2">
+                <div className="text-[11px] text-slate-400 line-clamp-2">
                   {step.shortDesc}
                 </div>
               </button>

@@ -4,6 +4,8 @@ export type PageRoute =
   | 'cloud-transformation'
   | 'ai-genai'
   | 'platform-engineering'
+  | 'corporate-training'
+  | 'staff-augmentation'
   | 'solutions'
   | 'about'
   | 'contact'
@@ -53,6 +55,14 @@ export interface ConsultationFormData {
   areaOfInterest: string;
   approximateProjectSize: string;
   message: string;
+  // Service-specific conditional fields
+  trainingTopic?: string;
+  participantCount?: string;
+  trainingFormat?: string;
+  requiredSkills?: string;
+  resourceCount?: string;
+  engagementDuration?: string;
+  preferredStartDate?: string;
 }
 
 export interface AssessmentQuestion {
