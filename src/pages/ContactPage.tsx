@@ -38,7 +38,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({
     jobTitle: '',
     country: 'United States',
     areaOfInterest: 'Cloud Transformation & VMware Modernization',
-    approximateProjectSize: 'Advisory / Architecture Assessment ($10k - $25k)',
     message: '',
     trainingTopic: 'Generative AI & Enterprise RAG',
     participantCount: '10 – 25 Participants',
@@ -77,14 +76,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({
     'Cloud Cost & FinOps Optimization',
     'Enterprise Architecture Review',
     'Other Specialized Consulting',
-  ];
-
-  const projectSizes = [
-    'Architecture Review / Assessment ($10k - $25k / ₹8L - ₹20L)',
-    'Focused Migration, Training or RAG MVP ($25k - $75k / ₹20L - ₹60L)',
-    'Enterprise Cloud / Platform Overhaul ($75k - $200k / ₹60L - ₹1.5Cr)',
-    'Multi-Year Enterprise Transformation ($200k+ / ₹1.5Cr+)',
-    'Ongoing Architecture Advisory / Staffing Retainer',
   ];
 
   const isTraining = formData.areaOfInterest === 'Corporate Technology Training';
@@ -405,24 +396,6 @@ export const ContactPage: React.FC<ContactPageProps> = ({
                       </div>
                     </div>
                   )}
-
-                  {/* Project Size / Budget */}
-                  <div>
-                    <label className="block text-xs font-mono uppercase text-slate-300 mb-1.5 font-bold tracking-wider">
-                      Approximate Project Size / Scope
-                    </label>
-                    <select
-                      value={formData.approximateProjectSize}
-                      onChange={(e) => setFormData({ ...formData, approximateProjectSize: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-sm bg-[#0A0A0B] border border-white/10 rounded-sm text-white focus:outline-none focus:border-blue-500 transition-colors font-sans"
-                    >
-                      {projectSizes.map((s) => (
-                        <option key={s} value={s}>
-                          {s}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
 
                   {/* Message */}
                   <div>

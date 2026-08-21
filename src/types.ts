@@ -53,7 +53,7 @@ export interface ConsultationFormData {
   jobTitle: string;
   country: string;
   areaOfInterest: string;
-  approximateProjectSize: string;
+  approximateProjectSize?: string;
   message: string;
   // Service-specific conditional fields
   trainingTopic?: string;
