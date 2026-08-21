@@ -8,6 +8,8 @@ export interface SiteConfig {
   shortName: string;
   tagline: string;
   supportingMessage: string;
+  logoUrl?: string;
+  logoIconUrl?: string;
   founder: {
     name: string;
     title: string;
@@ -34,6 +36,8 @@ export const siteConfig: SiteConfig = {
   companyName: "Devyai Technology Services",
   shortName: "Devyai Tech",
   tagline: "Cloud & AI Transformation for Modern Enterprises",
+  logoUrl: "/logo.svg",
+  logoIconUrl: "/logo-icon.svg",
   supportingMessage:
     "We help organizations modernize their cloud infrastructure, adopt Generative AI, and build scalable digital platforms across AWS, Azure and Google Cloud.",
   founder: {

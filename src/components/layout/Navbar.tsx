@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 import { PageRoute } from '../../types';
+import { DevyaiLogo } from '../common/DevyaiLogo';
 
 interface NavbarProps {
   currentRoute: PageRoute;
@@ -62,19 +63,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             id="brand-logo-button"
             onClick={() => handleLinkClick('home')}
-            className="flex items-center gap-3 text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded p-1"
+            className="flex items-center text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded p-1"
           >
-            <div className="w-10 h-10 rounded-sm bg-blue-600 border border-blue-400/30 flex items-center justify-center text-white font-black shadow-lg shadow-blue-600/20 group-hover:scale-105 transition-transform">
-              <Cpu className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <span className="text-base sm:text-lg font-black tracking-tight text-white block uppercase">
-                {siteConfig.companyName}
-              </span>
-              <span className="text-[10px] text-blue-500 font-bold tracking-[0.25em] uppercase block">
-                Cloud & AI Architecture
-              </span>
-            </div>
+            <DevyaiLogo variant="horizontal" size="md" />
           </button>
 
           {/* Desktop Navigation Links */}

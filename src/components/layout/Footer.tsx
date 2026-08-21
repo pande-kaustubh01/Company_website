@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 import { PageRoute } from '../../types';
+import { DevyaiLogo } from '../common/DevyaiLogo';
 
 interface FooterProps {
   onNavigate: (route: PageRoute) => void;
@@ -71,13 +72,8 @@ export const Footer: React.FC<FooterProps> = ({
           
           {/* Column 1: Company Profile */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-sm bg-blue-600 flex items-center justify-center text-white font-black">
-                <Cpu className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-black uppercase tracking-tight text-white">
-                {siteConfig.companyName}
-              </span>
+            <div className="cursor-pointer" onClick={() => handleNav('home')}>
+              <DevyaiLogo variant="horizontal" size="lg" />
             </div>
             
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
